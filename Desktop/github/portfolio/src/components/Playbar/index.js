@@ -46,7 +46,7 @@ function Playbar() {
             </div>
             
             <div className={classes.additional}>
-
+                Made with ❤️ ~ by Marcus
             </div>
         </div>
      );

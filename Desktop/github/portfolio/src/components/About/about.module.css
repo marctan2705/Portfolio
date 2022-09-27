@@ -47,6 +47,7 @@
     border: 12px solid black;
     overflow: hidden;
     animation: record 20s linear infinite;
+    cursor: pointer;
 }
 
 .album{

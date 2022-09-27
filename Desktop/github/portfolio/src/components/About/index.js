@@ -30,10 +30,10 @@ function About(props) {
                 
                 <div className={classes.pinkbox} >
                     {
-                        pic == 0 ? <img onClick={() => {setpic((pic + 1)%3)}} className={`${classes.album} ${pic == 0 ? classes.fadeIn : classes.fadeOut}`} src = {album}></img>
+                        pic == 0 ? <img onClick={() => {setpic((pic + 1)%2)}} className={`${classes.album} ${pic == 0 ? classes.fadeIn : classes.fadeOut}`} src = {album}></img>
                         :
-                        pic == 1 ? <img onClick={() => {setpic((pic + 1)%3)}} className={`${classes.album1} ${pic == 1 ? classes.fadeIn : classes.fadeOut}`} src = { mountain} />
-                        : <img onClick={() => {setpic((pic + 1)%3)}}className={`${classes.album2} ${pic == 2 ? classes.fadeIn : classes.fadeOut}`} src = { berke} />
+                        pic == 1 ? <img onClick={() => {setpic((pic + 1)%2)}} className={`${classes.album1} ${pic == 1 ? classes.fadeIn : classes.fadeOut}`} src = { mountain} /> : null
+                        // : <img onClick={() => {setpic((pic + 1)%3)}}className={`${classes.album2} ${pic == 2 ? classes.fadeIn : classes.fadeOut}`} src = { berke} />
                         
                     }
                 </div>

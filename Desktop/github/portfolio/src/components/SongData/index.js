@@ -6,31 +6,33 @@ import playgreen from "../../Assets/playgreen.png"
 import download from "../../Assets/download.png"
 import back from "../../Assets/Group 7.png"
 function SongData(props) {
+    const project = props.project;
+    var i = 0;
     return ( 
-        <div className={classes.data}>
+        <div className={classes.data} style={{background: project.color}}>
             <div className={classes.backrow}>
             <img src = {back} className={classes.back} onClick={props.handleClick}/>
             </div>
             <div className={classes.info}>
-                <img className={classes.img} src={car}></img>
+                <img className={classes.img} src={project.image}></img>
                 <div className={classes.header}>
                     <div className={classes.subheader}>Project</div>
                     <div className={classes.title}>
-                        {props.title}
+                        {project.name}
                     </div>
                     <div className={classes.artist}>
-                        <span ><img className={classes.dp} src={mtan}></img></span> &nbsp;  Marcus • 2021 • Frontend Developer
+                        <span ><img className={classes.dp} src={mtan}></img></span> &nbsp;  Marcus • 2021 • {project.role}
                     </div>
                     
                 </div>
             </div>
             <div className={classes.bar}>
-                <img className={classes.mainimage} src={playgreen} />
+                <a href={project.link}><img className={classes.mainimage} src={playgreen} /></a>
                 <img className={classes.ld} src={heart} />
                 <img className={classes.ld} src={download} />
             </div>
             <div className={classes.description}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam egestas, dui nec sagittis commodo, mauris magna faucibus eros, non volutpat nisi mauris in enim. Donec porta semper risus, nec finibus ex. Pellentesque dictum, justo eget maximus rutrum, nisi nunc eleifend odio, at blandit odio odio a risus. Aliquam at augue tortor. Sed at facilisis erat. Suspendisse ipsum velit, dictum quis congue ac, eleifend sit amet lacus. Nulla neque dui, lobortis quis ex a, tempus fermentum justo. Phasellus pharetra metus et tortor convallis, et hendrerit lacus luctus. Etiam maximus ac ante eget pellentesque. Fusce porttitor dui libero, quis tempor metus dictum in.
+            {project.description}
             </div>
             <div className={classes.bar2}>
                 <div className={classes.first}>#</div>
@@ -38,26 +40,20 @@ function SongData(props) {
                 <div className={classes.subsequent}>Type</div>
             </div>
             <hr className={classes.barhr}></hr>
-            <div className={classes.row}>
-                <div className={classes.first}>1</div>
-                <div className={classes.subsequent}>ReactJS</div>
-                <div className={classes.subsequent}>Frontend</div>
-            </div>
-            <div className={classes.row}>
-                <div className={classes.first}>2</div>
-                <div className={classes.subsequent}>MongoDB</div>
-                <div className={classes.subsequent}>Backend</div>
-            </div>
-            <div className={classes.row}>
-                <div className={classes.first}>3</div>
-                <div className={classes.subsequent}>NodeJS</div>
-                <div className={classes.subsequent}>Environment</div>
-            </div>
-            <div className={classes.rowlast}>
-                <div className={classes.first}>4</div>
-                <div className={classes.subsequent}>Express</div>
-                <div className={classes.subsequent}>API Framework</div>
-            </div>
+            {
+                project.tech.map(
+                    (e) => {
+                        i = i + 1
+                        return(
+                            <div className={classes.row}>
+                            <div className={classes.first}>{i}</div>
+                            <div className={classes.subsequent}>{e.name}</div>
+                            <div className={classes.subsequent}>{e.type}</div>
+                            </div>
+                        )
+                    }
+                )
+            }
         
         </div>
      );

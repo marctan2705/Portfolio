@@ -23,28 +23,28 @@
     color: pink;
 }
 .name:hover{
-
     animation: jump 0.5s linear infinite;
 }
 
 .title{
-    font-size: 50px;
+    font-size: 3vw;
     font-weight: bold;
     animation: swap 10s linear infinite;
 }
 
 .description{
+    font-size: 1vw;
     color: white;
 }
 .pp{
-    height: 500px;
-    width: 500px;
+    height: 30vw;
+    width: 30vw;
 }
 .pinkbox{
     background-color: #1DB954;
     margin-right: 70px;
-    height: 500px;
-    width: 500px;
+    height: 30vw;
+    width: 30vw;
     border-radius: 50%;
     overflow: hidden;
 }
@@ -74,4 +74,14 @@
     100%{
         color: #1DB954;
     }
+}
+
+.link{
+    font-weight: bold;
+    cursor: pointer;
+    color: rgb(244, 244, 102);
+}
+
+.selection{
+    margin-top:2vh;
 }

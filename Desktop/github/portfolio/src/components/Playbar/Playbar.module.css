@@ -101,3 +101,11 @@
     border-radius: 10px;
     transition: 0.5s;
 }
+
+.additional{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 1.5vw;
+    font-size: 1.1vw;
+}

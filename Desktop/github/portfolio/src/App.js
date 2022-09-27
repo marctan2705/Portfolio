@@ -31,7 +31,7 @@ function App() {
       <div className='page'>
         <Sidebar handleClick={handleClick} handleClick2={handleClick2} handleClick3={handleClick3}/>
         <div className='content'>
-          <Homepage ref1 = {ref1}/> 
+          <Homepage ref1 = {ref1} handleClick2={handleClick2} handleClick3={handleClick3}/> 
           <div className='space'></div>
           <About ref2 = {ref2}/>
           <div className='space'></div>

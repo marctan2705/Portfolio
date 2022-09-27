@@ -18,7 +18,7 @@ function Homepage(props) {
                 Over the past few years, I have interned as a developer, product manager, and management consultant for companies ranging from exciting new startups to existing big corporations, successfully developing products for them that are not only creative and effective, but also user-centric and interactive.
             </div>
             <div className = {classes.selection}>
-                <a>Read about me</a> or <a>Take a look at my projects and experiences</a>
+                Read <a className={classes.link} onClick={props.handleClick2}> about me</a> or take a look at <a className={classes.link} onClick={props.handleClick3}> my projects and experiences</a>
             </div>
         </div>
         </div>
